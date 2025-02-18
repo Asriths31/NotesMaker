@@ -6,13 +6,14 @@ import add from "../img/add.png"
 function Notes(){
     let [data,setData]=React.useState([])
     let notesss
-
+     console.log(JSON.parse(localStorage.getItem("data")))
     if((JSON.stringify(data)!==JSON.stringify(JSON.parse(localStorage.getItem("data"))))){
       setData(JSON.parse(localStorage.getItem("data")))
       }
     
-      if(data.length===0){
+      if(data===null||data.length===0){
       notesss=<div className="empty"><Link to="/create"><p >Add Any Note</p><img src={add}></img></Link></div>
+      // localStorage.setItem("data",JSON.stringify([]))
       }
     else{ notesss=data.map(data=>{
            return(
@@ -46,8 +47,9 @@ function Notes(){
           }
          })
           localStorage.setItem("data",JSON.stringify(data))
-          
+          console.log("delete")
     } 
+    
     
     return(
         <>
@@ -56,7 +58,7 @@ function Notes(){
           <p>Notes Maker</p>
         </header>
         <div className="notes-body">{notesss}</div>
-        {data.length===0?<span style={{display:"none"}}></span>:
+        {data===null||data.length===0?<span style={{display:"none"}}></span>:
         <Link to="/create">
           <div className="create-btn">
           <button><img src={add}></img><p>Create new note</p></button>

@@ -12,9 +12,14 @@ function CreateNote(){
             title:title,
             content:content
         }
+        if(data===null){
+            data=[note]
+        }
+        else{
         data.push(note)
+        }
         localStorage.setItem("data",JSON.stringify(data))
-        // console.log(note,"iisunvnvin ")
+        console.log(data,"iisunvnvin ")
     } 
     return(
         <>
