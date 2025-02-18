@@ -19,7 +19,7 @@ function CreateNote(){
         data.push(note)
         }
         localStorage.setItem("data",JSON.stringify(data))
-        console.log(data,"iisunvnvin ")
+        // console.log(data,"iisunvnvin ")
     } 
     return(
         <>

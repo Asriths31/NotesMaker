@@ -6,13 +6,13 @@ import add from "../img/add.png"
 function Notes(){
     let [data,setData]=React.useState([])
     let notesss
-     console.log(JSON.parse(localStorage.getItem("data")))
-    if((JSON.stringify(data)!==JSON.stringify(JSON.parse(localStorage.getItem("data"))))){
+    //  console.log(JSON.parse(localStorage.getItem("data")))
+    if((JSON.stringify(data)!==JSON.stringify(JSON.parse(localStorage.getItem("data"))))){ //to check if the notes are updated
       setData(JSON.parse(localStorage.getItem("data")))
       }
     
       if(data===null||data.length===0){
-      notesss=<div className="empty"><Link to="/create"><p >Add Any Note</p><img src={add}></img></Link></div>
+      notesss=<div className="empty"><Link to="/create"><p >Add Any Note</p><img src={add}></img></Link></div> //if notes are empty
       // localStorage.setItem("data",JSON.stringify([]))
       }
     else{ notesss=data.map(data=>{
@@ -47,7 +47,7 @@ function Notes(){
           }
          })
           localStorage.setItem("data",JSON.stringify(data))
-          console.log("delete")
+          // console.log("delete")
     } 
     
     

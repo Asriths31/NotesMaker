@@ -6,7 +6,7 @@ function Edit(){
     let data=JSON.parse(localStorage.getItem("data"))
     let params=new URLSearchParams(window.location.search)
     let id=params.get("id")
-    console.log(id)
+    // console.log(id)
     function handleClick(){
         data.map((dat)=>{
             if(dat.id==id){
@@ -15,7 +15,7 @@ function Edit(){
             }
            
         })
-        console.log(data,content)
+        // console.log(data,content)
        localStorage.setItem("data",JSON.stringify(data))
     }
     
@@ -23,7 +23,7 @@ function Edit(){
         if(dat.id==id){
              setTitle(dat.title)
              setContent(dat.content)
-             console.log(dat.title)
+            //  console.log(dat.title)
         }
     })},[])
     return(
