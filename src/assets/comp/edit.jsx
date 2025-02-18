@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router"
+import backLogo from "../img/arrow.png"
 function Edit(){
     const [title,setTitle]=React.useState("")
     const [content,setContent]=React.useState("")
@@ -28,6 +29,7 @@ function Edit(){
     })},[])
     return(
         <div className="create-note edit-note">
+         <Link to="/"><img className="back-btn" src={backLogo}></img></Link>
          <h2>Edit Your Note Here</h2>
          <label>Title</label><input placeholder="Enter Title"onChange={(e)=>setTitle(e.target.value)} value={title}></input>
          <label>Content</label><textarea placeholder="Enter Your content" onChange={(e)=>setContent(e.target.value)} value={content}></textarea>
