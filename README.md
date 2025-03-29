@@ -1,7 +1,7 @@
 # React + Vite
 
 ## Live Demo  
-🔗 [Click here to view the demo]([https://super-parfait-b1cee2.netlify.app/])
+🔗 [Click here to view the demo](https://super-parfait-b1cee2.netlify.app/)
 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
